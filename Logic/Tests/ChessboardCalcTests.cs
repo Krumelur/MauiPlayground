@@ -61,16 +61,20 @@ public class ChessboardCalcTests
 		var colSizes = new List<long>();
 		var rowSizes = new List<long>();
 		
-		// Test with N = 20,000
-		long maxRepeats = 4000;
+		// Test with N = 40,000 (8,000 * 5 columns and rows)
+		// On my Macbook Air M1 this test completes in 8.8 seconds.
+		long maxRepeats = 8000;
 
 		for(var i = 0; i < maxRepeats; i++)
 		{
 			colSizes.AddRange(new long[] {3, 1, 2, 7, 1 });
 			rowSizes.AddRange(new long[] {1, 8, 4, 5, 2 });
 		}
-		
-		long expectedTotalArea = 4480000000;
+
+		Assert.Equal(40000, colSizes.Count);
+		Assert.Equal(40000, rowSizes.Count);
+
+		long expectedTotalArea = 17920000000;
 		var sumColWidths = colSizes.Sum();
 		var sumRowHeights = rowSizes.Sum();
 
