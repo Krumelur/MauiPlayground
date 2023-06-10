@@ -4,7 +4,7 @@
 
 Tests at: https://github.com/Krumelur/MauiPlayground/blob/main/Logic/Tests/AntTests.cs
 
-![ant.gif](ant.gif)
+![antrace.gif](antrace.gif)
 
 ## Strange Chessboard
 
