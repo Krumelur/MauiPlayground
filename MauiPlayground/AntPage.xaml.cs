@@ -50,6 +50,8 @@ public partial class AntPage : ContentPage, IQueryAttributable, INotifyPropertyC
 	/// </summary>
 	void UpdateView()
 	{
+		AntString = _grid.GetGridAsString(_ant);
+
 		// Put the ant in the right position.
 		AntGridLayout.SetColumn(_antImageContainer, _ant.Position.x);
 		AntGridLayout.SetRow(_antImageContainer, _ant.Position.y);
@@ -163,5 +165,5 @@ public partial class AntPage : ContentPage, IQueryAttributable, INotifyPropertyC
 	/// <summary>
 	/// The current ASCII representation.
 	/// </summary>
-	public string AntString => _grid != null ? _grid.GetGridAsString(_ant) : string.Empty;
+	public string AntString { get; set; }
 }
