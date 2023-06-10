@@ -60,14 +60,15 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\.DS_Store" />
+	  <None Remove="Resources\Images\ant.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Logic\StrangeChessboard\StrangeChessboard.csproj" />
 	  <ProjectReference Include="..\Logic\LangtonAnt\LangtonAnt.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Update="ant.png">
+	  <BundleResource Include="Resources\Images\ant.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
+	  </BundleResource>
 	</ItemGroup>
 </Project>
